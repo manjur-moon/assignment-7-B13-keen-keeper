@@ -1,6 +1,6 @@
-# KeenKeeper
+KeenKeeper
 
-KeenKeeper is a clean, Figma-matched friendship tracker built with React and Vite. It helps you keep meaningful relationships close with friend cards, friend details, quick check-ins, a persistent interaction timeline, and simple friendship analytics.
+KeenKeeper is a simple friendship management app designed to help you stay connected with the people who matter. It lets you view your friends, track check-ins, and see your interaction habits over time.
 
 ## Live Links
 
@@ -19,88 +19,68 @@ KeenKeeper is a clean, Figma-matched friendship tracker built with React and Vit
 - React Icons
 - Recharts
 
-## Key Features
 
-1. **Friend Dashboard** — View realistic friend profiles in a responsive 4-column card grid with Figma-style status badges and summary cards.
-2. **Friend Details** — Open a profile to see contact goals, next due date, bio, tags, and quick action buttons.
-3. **Quick Check-Ins** — Log Call, Text, or Video interactions from the details page with toast feedback.
-4. **Persistent Timeline** — Logged interactions are saved to localStorage and can be filtered by interaction type.
-5. **Friendship Analytics** — A Recharts donut chart summarizes Call, Text, and Video interaction counts.
-6. **Responsive Layout** — The app works on mobile, tablet, and desktop screens.
-7. **Provided Figma Assets** — Logo, social icons, quick-check icons, and profile images from the asset package are used in the UI.
 
-## Routes
+##Key Features
 
-| Route | Description |
-| --- | --- |
-| `/` | Home dashboard with banner, summary cards, and friend cards |
-| `/friend/:id` | Friend details and quick check-in page |
-| `/timeline` | Interaction timeline with filters |
-| `/stats` | Friendship analytics chart |
-| `*` | Custom 404 page |
+Friend Dashboard
+Browse realistic friend profiles in a responsive 4-column card layout. Each card includes Figma-style status badges and helpful summary information.
 
-## Installation
+Friend Details
+Open any friend profile to view their contact goals, next due date, bio, tags, and quick action options.
 
-```bash
+Quick Check-Ins
+Log a Call, Text, or Video interaction directly from a friend’s detail page. A toast message confirms when the check-in has been saved.
+
+Persistent Timeline
+All logged interactions are saved in browser localStorage, so your timeline remains available even after refreshing the page. You can also filter interactions by type.
+
+Friendship Analytics
+A Recharts donut chart gives you a clear visual summary of how many Calls, Texts, and Video interactions you’ve logged.
+
+Responsive Layout
+The app is fully responsive and works smoothly across mobile, tablet, and desktop screens.
+
+Provided Figma Assets
+The UI uses the provided logo, social icons, quick-check icons, and friend profile images from the asset package.
+
+##Routes
+Route	Description
+/	Home dashboard with banner, summary cards, and friend cards
+/friend/:id	Friend details and quick check-in page
+/timeline	Interaction timeline with filters
+/stats	Friendship analytics chart
+*	Custom 404 page
+Installation
 git clone https://github.com/your-username/keenkeeper.git
 cd keenkeeper
 npm install
-```
-
-## Run Locally
-
-```bash
+Run Locally
 npm run dev
-```
 
 Then open the local Vite URL shown in your terminal.
 
-## Build
-
-```bash
+Build
 npm run build
-```
-
-## Preview Production Build
-
-```bash
+Preview Production Build
 npm run preview
-```
-
-## Data Source
+Data Source
 
 Friend profiles are stored in:
 
-```text
 public/friends.json
-```
 
-Timeline/check-in data is stored in browser localStorage with the key:
+Timeline and check-in data are stored in browser localStorage using the key:
 
-```text
 keenkeeper-timeline
-```
 
 Provided image assets are stored in:
 
-```text
 public/assets
 public/assets/friends
-```
-
-## Deployment Notes
+Deployment Notes
 
 The project includes route refresh support for single-page app deployment:
 
-- Netlify: `public/_redirects`
-- Vercel: `vercel.json`
-
-## Screenshots
-
-Add screenshots here after deployment:
-
-```text
-/public/screenshots/home.png
-/public/screenshots/timeline.png
-/public/screenshots/stats.png
-```
+Netlify: public/_redirects
+Vercel: vercel.json
